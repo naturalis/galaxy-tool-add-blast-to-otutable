@@ -1,0 +1,20 @@
+<tool id="blastotujoin" name="Add blast to otutable">
+<description></description>
+<command interpreter="python">add_blast_otutable.py $input $input2 $output</command>
+<inputs>
+<param format="tabular" name="input" type="data" label="Blast output"/>
+<param format=".txt" name="input2" type="data" label="otu table"/>
+</inputs>
+<outputs>
+<data format="tabular" type="data" name="output" label="merged files"/>
+</outputs>
+<tests>
+<test>
+<param name="test_input" value="test_input.txt"/>
+<output name="test_outout" file="test_output.txt"/>
+</test>
+</tests>
+<help>
+This tool merge BLAST output with otu tables
+</help>
+</tool>
